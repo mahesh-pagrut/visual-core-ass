@@ -6,12 +6,11 @@ import SortFilter from "./SortFilter";
 export default function FilterPanel({ filters, setFilters, products, isOpen, setIsOpen }) {
   const categories = [...new Set(products.map((p) => p.category))];
 
-  // Local copy so user can change filters and hit "Apply"
   const [localCats, setLocalCats] = useState(filters.categories || []);
   const [localRange, setLocalRange] = useState(filters.priceRange || [0, 50000]);
   const [localSort, setLocalSort] = useState(filters.sortBy || "default");
 
-  // Keep local values in sync when parent filters change externally
+
   useEffect(() => {
     setLocalCats(filters.categories || []);
     setLocalRange(filters.priceRange || [0, 50000]);
@@ -19,13 +18,13 @@ export default function FilterPanel({ filters, setFilters, products, isOpen, set
   }, [filters]);
 
   function applyFilters() {
-    setFilters((prev) => ({ 
-      ...prev, 
-      categories: localCats, 
+    setFilters((prev) => ({
+      ...prev,
+      categories: localCats,
       priceRange: localRange,
-      sortBy: localSort 
+      sortBy: localSort
     }));
-    // Close filter panel on mobile after applying filters
+
     setIsOpen(false);
   }
 
@@ -36,20 +35,20 @@ export default function FilterPanel({ filters, setFilters, products, isOpen, set
     setLocalCats(resetCats);
     setLocalRange(resetRange);
     setLocalSort(resetSort);
-    setFilters((prev) => ({ 
-      ...prev, 
-      categories: resetCats, 
+    setFilters((prev) => ({
+      ...prev,
+      categories: resetCats,
       priceRange: resetRange,
-      sortBy: resetSort 
+      sortBy: resetSort
     }));
-    // Close filter panel on mobile after resetting filters
+
     setIsOpen(false);
   }
 
   return (
-    <nav 
+    <nav
       className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm px-6 py-4"
-      role="navigation" 
+      role="navigation"
       aria-label="Product filters"
     >
       <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
@@ -70,15 +69,15 @@ export default function FilterPanel({ filters, setFilters, products, isOpen, set
         </div>
 
         <div className="flex items-center gap-3">
-          <button 
-            type="button" 
+          <button
+            type="button"
             className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg shadow-sm transition-all hover:shadow-md active:transform active:scale-95"
             onClick={applyFilters}
           >
             Apply
           </button>
-          <button 
-            type="button" 
+          <button
+            type="button"
             className="px-5 py-2 border border-gray-300 hover:border-gray-400 bg-white text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-all active:transform active:scale-95"
             onClick={resetFilters}
           >

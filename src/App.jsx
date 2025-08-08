@@ -2,7 +2,6 @@ import { useState, useMemo, useEffect } from "react";
 import ProductGrid from "./components/ProductGrid";
 import FilterPanel from "./components/FilterPanel";
 import Pagination from "./components/Pagination";
-// Import icons for the filter toggle
 import { ChevronDownIcon, ChevronUpIcon, AdjustmentsHorizontalIcon } from '@heroicons/react/24/outline';
 import { filterProducts } from "./utils/filterUtils";
 import productsData from "./productsData/products.json";
@@ -27,26 +26,21 @@ export default function App() {
     [products, filters]
   );
 
-  // Pagination logic
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
   const paginatedProducts = filteredProducts.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
-
-  // Reset to page 1 when filters change
   useEffect(() => {
     setCurrentPage(1);
   }, [filters]);
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header with title */}
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <h1 className="text-xl font-semibold text-gray-900">Product Catalog</h1>
-            {/* Mobile filter toggle */}
             <button
               type="button"
               onClick={() => setIsFilterOpen(!isFilterOpen)}
@@ -64,9 +58,7 @@ export default function App() {
         </div>
       </header>
 
-      {/* Main content */}
       <main>
-        {/* Filter navbar - hidden by default on mobile */}
         <div className={`bg-white border-b border-gray-200 transition-all duration-300 ease-in-out
           ${isFilterOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0 overflow-hidden lg:max-h-[500px] lg:opacity-100'}`}
         >
@@ -81,21 +73,17 @@ export default function App() {
           </div>
         </div>
 
-        {/* Products section */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          {/* Products count */}
           <div className="mb-4">
             <p className="text-sm text-gray-600">
               Showing {paginatedProducts.length} of {filteredProducts.length} products
             </p>
           </div>
 
-          {/* Products grid */}
           <div className="mb-8">
             <ProductGrid products={paginatedProducts} />
           </div>
 
-          {/* Pagination */}
           <div className="pt-4 border-t border-gray-200">
             <Pagination
               currentPage={currentPage}

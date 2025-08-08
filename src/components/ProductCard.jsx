@@ -39,7 +39,9 @@ export default function ProductCard({ product }) {
           </p>
           
        
-          <button className="text-sm px-3 py-1.5 rounded-lg border-2 border-blue-600 text-blue-600 font-medium
+          <button 
+            onClick={() => alert("Note: Add to Cart functionality is for demonstration purposes only!")}
+            className="text-sm px-3 py-1.5 rounded-lg border-2 border-blue-600 text-blue-600 font-medium
             hover:bg-blue-600 hover:text-white transition-all duration-200 
             active:scale-95">
             Add to Cart

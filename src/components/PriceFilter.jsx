@@ -18,25 +18,36 @@ export default function PriceFilter({ range, onChange }) {
 
   return (
     <div className="flex flex-col gap-2">
-      <h4 className="font-medium text-gray-700">Price Range</h4>
-      <select
-        value={getCurrentRange()}
-        onChange={(e) => {
-          const [min, max] = e.target.value.split('-').map(Number);
-          onChange([min, max]);
-        }}
-        className="w-48 px-3 py-2 rounded-lg border border-gray-300 bg-white text-gray-700 text-sm
-          focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none 
-          cursor-pointer appearance-none
-          bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23666666%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')] 
-          bg-[length:1.25rem] bg-[right_0.5rem_center] bg-no-repeat"
-      >
-        {ranges.map(range => (
-          <option key={range.value.join('-')} value={range.value.join('-')}>
-            {range.label}
-          </option>
-        ))}
-      </select>
+      <div className="flex items-center gap-2 mb-2">
+        <svg className="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <h4 className="text-sm font-medium text-gray-700">Price</h4>
+      </div>
+      <div className="relative">
+        <select
+          value={getCurrentRange()}
+          onChange={(e) => {
+            const [min, max] = e.target.value.split('-').map(Number);
+            onChange([min, max]);
+          }}
+          className="w-full pl-3.5 pr-9 py-1.5 rounded-md border border-gray-200 bg-white text-gray-700 text-sm
+            focus:ring-1 focus:ring-blue-500/10 focus:border-blue-400 outline-none 
+            cursor-pointer appearance-none transition-colors
+            hover:border-gray-300"
+        >
+          {ranges.map(range => (
+            <option key={range.value.join('-')} value={range.value.join('-')}>
+              {range.label}
+            </option>
+          ))}
+        </select>
+        <div className="absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500">
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+      </div>
     </div>
   );
 }

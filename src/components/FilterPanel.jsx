@@ -47,7 +47,7 @@ export default function FilterPanel({ filters, setFilters, products, isOpen, set
 
   return (
     <nav
-      className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm py-3"
+      className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm py-3 px-3"
       role="navigation"
       aria-label="Product filters"
     >
@@ -87,7 +87,7 @@ export default function FilterPanel({ filters, setFilters, products, isOpen, set
             />
           </div>
           
-          <div className="w-full sm:w-80 lg:w-96">
+          <div className="w-full sm:w-80 lg:w-90">
             <SortFilter
               value={localSort}
               onChange={(newSort) => setLocalSort(newSort)}
@@ -97,7 +97,7 @@ export default function FilterPanel({ filters, setFilters, products, isOpen, set
           <button
             type="button"
             className="ml-auto px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg 
-            shadow-sm transition-all hover:bg-blue-700 
+            shadow-sm transition-all hover:bg-blue-700  lg:mt-8
             active:transform active:scale-95 flex items-center gap-1.5"
             onClick={applyFilters}
           >

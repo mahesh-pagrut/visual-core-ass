@@ -13,7 +13,7 @@ Products Catalog Pro is a sophisticated web application designed to showcase and
 - **Inventory Management**: Useful for managing and displaying product inventories
 - **Digital Marketplaces**: Suitable for multi-vendor platforms displaying various products
 
-## Homepage Layout
+## Homepage Layout and Responsivness
 ## 📸 Screenshots
 
 ## 🖥 Desktop View
@@ -25,16 +25,17 @@ Products Catalog Pro is a sophisticated web application designed to showcase and
 
 ## 💻 Tablet View
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/d393d4d0-627e-4ea2-9765-68a63369e050" alt="Tablet View - Filters Visible" width="45%" />
-  <img src="https://github.com/user-attachments/assets/e0bb67dc-f648-4145-9e62-5838de681dbd" alt="Tablet View - Product Grid" width="45%" />
+  <img width="554" height="800" alt="image" src="https://github.com/user-attachments/assets/2147c64c-de77-4290-bffb-d11a8f20901f" />
+  <img width="555" height="796" alt="image" src="https://github.com/user-attachments/assets/a00946ac-024e-417d-9169-4674c85064e0" />
+
 </p>
 
 ---
 
 ## 📱 Mobile View
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/fd16ea33-6bfb-461e-ad94-171c2628267c" alt="Mobile View - Collapsible Filter Panel" width="45%" />
-  <img src="https://github.com/user-attachments/assets/29e907ed-6319-41c2-b1f0-ef8057db176b" alt="Mobile View - Stacked Product Cards" width="45%" />
+  <img width="481" height="860" alt="image" src="https://github.com/user-attachments/assets/d3ca047a-b79f-4587-9d34-88068289156b" />
+  <img width="476" height="864" alt="image" src="https://github.com/user-attachments/assets/a9266bbe-b8d1-4551-b032-d3c0a75eae0a" />
 </p>
 
 

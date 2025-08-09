@@ -25,9 +25,8 @@ Products Catalog Pro is a sophisticated web application designed to showcase and
 
 ## 💻 Tablet View
 <p align="center">
-  <img width="554" height="800" alt="image" src="https://github.com/user-attachments/assets/2147c64c-de77-4290-bffb-d11a8f20901f" />
-  <img width="555" height="796" alt="image" src="https://github.com/user-attachments/assets/a00946ac-024e-417d-9169-4674c85064e0" />
-
+  <img src="https://github.com/user-attachments/assets/2147c64c-de77-4290-bffb-d11a8f20901f" alt="Image 1" width="45%" />
+  <img src="https://github.com/user-attachments/assets/a00946ac-024e-417d-9169-4674c85064e0" alt="Image 2" width="45%" />
 </p>
 
 ---

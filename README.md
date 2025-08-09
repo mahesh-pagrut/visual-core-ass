@@ -13,6 +13,30 @@ Products Catalog Pro is a sophisticated web application designed to showcase and
 - **Inventory Management**: Useful for managing and displaying product inventories
 - **Digital Marketplaces**: Suitable for multi-vendor platforms displaying various products
 
+ ## Homepage Layout
+
+# Desktop View – 
+<img width="1919" height="1073" alt="image" src="https://github.com/user-attachments/assets/a310e9c9-14a6-41a5-8048-8110dcfd687a" />
+
+
+# Tablet View – 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d393d4d0-627e-4ea2-9765-68a63369e050" alt="Tablet View - Filters Visible" width="45%" />
+  <img src="https://github.com/user-attachments/assets/e0bb67dc-f648-4145-9e62-5838de681dbd" alt="Tablet View - Product Grid" width="45%" />
+</p>
+
+
+
+# Mobile View – 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/fd16ea33-6bfb-461e-ad94-171c2628267c" alt="Mobile View - Collapsible Filter Panel" width="45%" />
+  <img src="https://github.com/user-attachments/assets/29e907ed-6319-41c2-b1f0-ef8057db176b" alt="Mobile View - Stacked Product Cards" width="45%" />
+</p>
+
+
+
+
+
 ## Key Functionalities
 
 ### 1. Advanced Filtering System
